@@ -135,9 +135,12 @@
     width: auto;
     opacity: 1;
   }
-  .wrapper .LeftItem nav .navList .navItem .navLink::before {
-    opacity: 0 !important;
-    display: none;
+  .wrapper .LeftItem nav .navList .navItem .navLink::before,
+  .wrapper .LeftItem nav .navList .accordion-button::before {
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    top: auto;
   }
   .wrapper header .searchbar {
     position: relative;
