@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="description" content="Web Content">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="author">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="content-script-type" content="text/javascript">
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./img/favicon/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="./img/favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+  <!-- Custom css -->
+  <link rel="stylesheet" href="css/main.min.css">
+  <title>Website title</title>
+</head>
+
+<body>
+  <div id="preloader">
+    <img src="img/logo.svg" alt="img" class="img-fluid">
+  </div>
+
+
+
+  <div class="tables-container">
+    <div class="table-responsive">
+      <div class="table-container">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Order ID</th>
+              <th scope="col">Customer Name</th>
+              <th scope="col">Order Type</th>
+              <th scope="col">Date</th>
+              <th scope="col" class="text-end">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>00001</td>
+              <td>Christine Brooks</td>
+              <td>Phone Purchase</td>
+              <td>14 Feb 2019</td>
+              <td class="text-end"><button>Successful</button></td>
+            </tr>
+
+            <tr>
+              <td>00002</td>
+              <td>Rosie Pearson</td>
+              <td>Subscription Purchase</td>
+              <td>14 Feb 2019</td>
+              <td class="text-end"><button class="Pending">Pending</button></td>
+            </tr>
+            <tr>
+              <td>00003</td>
+              <td>Darrell Caldwell</td>
+              <td>SMS Credit Purchase</td>
+              <td>14 Feb 2019</td>
+              <td class="text-end"><button class="Failed">Failed</button></td>
+            </tr>
+            <tr>
+              <td>00004</td>
+              <td>Gilbert Johnston</td>
+              <td>SMS Credit Purchase</td>
+              <td>14 Feb 2019</td>
+              <td class="text-end"><button>Successful</button></td>
+            </tr>
+            <tr>
+              <td>00005</td>
+              <td>Alan Cain</td>
+              <td>SMS Credit Purchase</td>
+              <td>14 Feb 2019</td>
+              <td class="text-end"><button>Successful</button></td>
+            </tr>
+
+
+          </tbody>
+        </table>
+      </div>
+      <button class="arrow-btn prev-btn">&larr;</button>
+      <button class="arrow-btn next-btn">&rarr;</button>
+    </div>
+
+    <div class="table-responsive">
+      <div class="table-container">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Order ID</th>
+              <th scope="col">Customer Name</th>
+              <th scope="col">Order Type</th>
+              <th scope="col">Date</th>
+              <th scope="col" class="text-end">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>00001</td>
+              <td>Christine Brooks</td>
+              <td>Phone Purchase</td>
+              <td>14 Feb 2019</td>
+              <td class="text-end"><button>Successful</button></td>
+            </tr>
+
+            <tr>
+              <td>00002</td>
+              <td>Rosie Pearson</td>
+              <td>Subscription Purchase</td>
+              <td>14 Feb 2019</td>
+              <td class="text-end"><button class="Pending">Pending</button></td>
+            </tr>
+            <tr>
+              <td>00003</td>
+              <td>Darrell Caldwell</td>
+              <td>SMS Credit Purchase</td>
+              <td>14 Feb 2019</td>
+              <td class="text-end"><button class="Failed">Failed</button></td>
+            </tr>
+            <tr>
+              <td>00004</td>
+              <td>Gilbert Johnston</td>
+              <td>SMS Credit Purchase</td>
+              <td>14 Feb 2019</td>
+              <td class="text-end"><button>Successful</button></td>
+            </tr>
+            <tr>
+              <td>00005</td>
+              <td>Alan Cain</td>
+              <td>SMS Credit Purchase</td>
+              <td>14 Feb 2019</td>
+              <td class="text-end"><button>Successful</button></td>
+            </tr>
+
+
+          </tbody>
+        </table>
+      </div>
+      <button class="arrow-btn prev-btn">&larr;</button>
+      <button class="arrow-btn next-btn">&rarr;</button>
+    </div>
+
+    <!-- Add more tables as needed -->
+  </div>
+
+
+
+
+  <!-- JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const tableContainers = document.querySelectorAll('.table-container');
+      const prevBtns = document.querySelectorAll('.prev-btn');
+      const nextBtns = document.querySelectorAll('.next-btn');
+
+      prevBtns.forEach((prevBtn, index) => {
+        prevBtn.addEventListener('click', function () {
+          tableContainers[index].scrollLeft -= 100;
+        });
+      });
+
+      nextBtns.forEach((nextBtn, index) => {
+        nextBtn.addEventListener('click', function () {
+          tableContainers[index].scrollLeft += 100;
+        });
+      });
+    });
+
+
+  </script>
+</body>
+
+</html>

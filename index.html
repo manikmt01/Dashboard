@@ -11,12 +11,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta http-equiv="content-script-type" content="text/javascript">
     <meta http-equiv="x-dns-prefetch-control" content="on">
-    <!-- 
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/fav_icon.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/images/fav_icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/fav_icon.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="assets/images/fav_icon.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/fav_icon.png"> -->
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./img/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./img/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
     <!-- Custom css -->
     <link rel="stylesheet" href="css/main.min.css">
     <title>Website title</title>
@@ -32,6 +32,13 @@
     <div class="wrapper">
         <!-- left item start  -->
         <div class="LeftItem bg-white minimize">
+            <button class="btn mobileButton d-lg-none d-inline-block position-absolute">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x-lg"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                </svg>
+            </button>
             <!-- logo and toggole button  start -->
             <div class="TopItem text-center position-relative">
                 <a href="index.html"><img src="img/logo.svg" alt="img"></a>
@@ -42,7 +49,6 @@
                             fill="#232323" />
                     </svg>
                 </button>
-
             </div>
             <!-- logo and toggole button  end -->
 
@@ -342,28 +348,40 @@
         <!-- header start  -->
         <header class="minimize">
             <div>
-                <div class="row align-items-center">
+                <div class="row align-items-center g-lg-3 g-2">
                     <!-- single item start  -->
-                    <div class="col-sm-5">
-                        <div class="searchbar">
-                            <input type="search" name="search" id="" placeholder="Search" class="form-control">
-                            <button class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"
-                                    viewBox="0 0 17 17" fill="none">
-                                    <g opacity="0.5">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M9.69341 12.535C12.4232 11.3748 13.6957 8.22136 12.5356 5.49152C11.3754 2.76168 8.22196 1.4892 5.49212 2.64936C2.76229 3.80951 1.48981 6.96297 2.64996 9.69281C3.81011 12.4226 6.96357 13.6951 9.69341 12.535Z"
-                                            stroke="black" stroke-width="1.2" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path d="M11.3901 11.3887L15.5555 15.5546" stroke="black" stroke-width="1.2"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                    </g>
-                                </svg></button>
+                    <div class="col-6">
+                        <div class="d-flex flex-wrap align-items-center gap-3">
+                            <div class="d-lg-none d-block">
+                                <button class="btn p-0  toggoleButoonMobile">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 20"
+                                        fill="none">
+                                        <path
+                                            d="M24 9V11C24 11.2652 23.8946 11.5196 23.7071 11.7071C23.5196 11.8946 23.2652 12 23 12H1C0.734784 12 0.48043 11.8946 0.292893 11.7071C0.105357 11.5196 0 11.2652 0 11V9C0 8.73478 0.105357 8.48043 0.292893 8.29289C0.48043 8.10536 0.734784 8 1 8H23C23.2652 8 23.5196 8.10536 23.7071 8.29289C23.8946 8.48043 24 8.73478 24 9ZM23 16H1C0.734784 16 0.48043 16.1054 0.292893 16.2929C0.105357 16.4804 0 16.7348 0 17V19C0 19.2652 0.105357 19.5196 0.292893 19.7071C0.48043 19.8946 0.734784 20 1 20H23C23.2652 20 23.5196 19.8946 23.7071 19.7071C23.8946 19.5196 24 19.2652 24 19V17C24 16.7348 23.8946 16.4804 23.7071 16.2929C23.5196 16.1054 23.2652 16 23 16ZM23 0H1C0.734784 0 0.48043 0.105357 0.292893 0.292893C0.105357 0.48043 0 0.734784 0 1V3C0 3.26522 0.105357 3.51957 0.292893 3.70711C0.48043 3.89464 0.734784 4 1 4H23C23.2652 4 23.5196 3.89464 23.7071 3.70711C23.8946 3.51957 24 3.26522 24 3V1C24 0.734784 23.8946 0.48043 23.7071 0.292893C23.5196 0.105357 23.2652 0 23 0Z"
+                                            fill="#232323" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="searchbar">
+                                <input type="search" name="search" id="" placeholder="Search" class="form-control">
+                                <button class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"
+                                        viewBox="0 0 17 17" fill="none">
+                                        <g opacity="0.5">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.69341 12.535C12.4232 11.3748 13.6957 8.22136 12.5356 5.49152C11.3754 2.76168 8.22196 1.4892 5.49212 2.64936C2.76229 3.80951 1.48981 6.96297 2.64996 9.69281C3.81011 12.4226 6.96357 13.6951 9.69341 12.535Z"
+                                                stroke="black" stroke-width="1.2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M11.3901 11.3887L15.5555 15.5546" stroke="black" stroke-width="1.2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </g>
+                                    </svg></button>
+                            </div>
                         </div>
                     </div>
                     <!-- single item end -->
 
                     <!-- single item start  -->
-                    <div class="col-sm-7">
+                    <div class="col-6">
                         <div class="rightHeader d-flex justify-content-end align-items-center">
                             <div class="dropdown dpd1">
                                 <button class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown"
@@ -403,7 +421,9 @@
                                 <button class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown"
                                     aria-expanded="false">
                                     <span class="media">
-                                        <img src="img/user.png" alt="img" class="img-fluid">
+                                        <span class="d-block">
+                                            <img src="img/user.png" alt="img" class="img-fluid">
+                                        </span>
                                         <span class="media-body">
                                             <span class="userTitle">Moni Roy</span>
                                             <span class="userRool">Admin</span>
@@ -434,12 +454,12 @@
             <!-- Sales Overview start  -->
             <div class="salesOverview">
                 <!-- row start  -->
-                <div class="row">
+                <div class="row g-lg-4 salesOverviewRow">
                     <!-- single item start  -->
                     <div class="col-xl-6">
-                        <div class="row salesItem">
+                        <div class="row salesItem gy-lg-0 gx-lg-3 g-2">
                             <!-- single item start  -->
-                            <div class="col-xl-6">
+                            <div class="col-6">
                                 <div class="item">
                                     <a href="">
                                         <span class="media align-items-center">
@@ -472,7 +492,7 @@
                             <!-- single item end -->
 
                             <!-- single item start  -->
-                            <div class="col-xl-6">
+                            <div class="col-6">
                                 <div class="item">
                                     <a href="">
                                         <span class="align-items-center media">
@@ -504,7 +524,7 @@
                             </div>
                             <!-- single item end -->
                             <!-- single item start  -->
-                            <div class="col-xl-6">
+                            <div class="col-6">
                                 <div class="item">
                                     <a href="">
                                         <span class="align-items-center media">
@@ -539,7 +559,7 @@
                             </div>
                             <!-- single item end -->
                             <!-- single item start  -->
-                            <div class="col-xl-6">
+                            <div class="col-6">
                                 <div class="item">
                                     <a href="">
                                         <span class="align-items-center media">
@@ -580,7 +600,8 @@
                     <!-- single item start  -->
                     <div class="col-xl-6">
                         <div class="salesOverviewRight">
-                            <div class="d-flex justify-content-between flex-wrap TitleArea align-items-center">
+                            <div
+                                class="d-flex justify-content-xl-between justify-content-center flex-wrap TitleArea align-items-center">
                                 <h2>Sales Overview</h2>
                                 <div>
                                     <select class="form-select" aria-label="Default select example">
@@ -592,129 +613,7 @@
                                 </div>
                             </div>
                             <div class="salesOverviewItem">
-                                <div class="row align-items-center">
-                                    <div class="col-xl-5">
-                                        <div class="imgItem">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="191" height="187"
-                                                viewBox="0 0 191 187" fill="none">
-                                                <path opacity="0.83"
-                                                    d="M149.493 56.6335C135.681 42.7183 116.502 34.0227 95.2276 33.8219C73.9534 33.6212 54.6035 41.9682 40.5347 55.6086C26.4659 69.2491 17.6569 88.2148 17.4538 109.241C17.2507 130.267 25.6962 149.391 39.4977 163.296C53.2992 177.2 72.4888 185.906 93.763 186.107C115.037 186.308 134.387 177.961 148.456 164.32C162.535 150.669 171.334 131.714 171.537 110.688C171.74 89.6623 163.294 70.5487 149.493 56.6335Z"
-                                                    fill="url(#paint0_radial_112_1791)" fill-opacity="0.5" />
-                                                <path
-                                                    d="M8.53798 99.6777C8.32417 121.676 17.1546 141.687 31.6082 156.247C46.0618 170.807 66.128 179.915 88.3858 180.126L89.1555 100.449L8.53798 99.6777Z"
-                                                    fill="#FFBB38" />
-                                                <path
-                                                    d="M40.2454 99.9746C40.1171 113.33 45.4731 125.47 54.2501 134.303C63.0163 143.136 75.1929 148.662 88.7057 148.789L89.1761 100.439L40.2454 99.9746Z"
-                                                    fill="#FFB11F" />
-                                                <path
-                                                    d="M27.0856 37.9108C10.8894 53.6116 0.765466 75.4195 0.530273 99.6047L89.1657 100.439L90.0103 12.8381C65.5289 12.6057 43.2818 22.21 27.0856 37.9108Z"
-                                                    fill="#4C78FF" />
-                                                <path
-                                                    d="M54.9029 65.9208C45.9655 74.5848 40.3744 86.6192 40.2461 99.9744L89.1661 100.439L89.6365 52.0901C76.1236 51.9633 63.8402 57.2568 54.9029 65.9208Z"
-                                                    fill="#3464F3" />
-                                                <path
-                                                    d="M161.712 30.0915C143.495 11.7386 118.202 0.264146 90.1281 0L89.1553 100.439L190.78 101.4C191.058 73.6544 179.929 48.4337 161.712 30.0915Z"
-                                                    fill="#16DBCC" />
-                                                <path
-                                                    d="M124.081 66.5756C115.315 57.7426 103.139 52.2166 89.6257 52.0898L89.1553 100.439L138.075 100.904C138.214 87.5487 132.858 75.4086 124.081 66.5756Z"
-                                                    fill="#1EC6B8" />
-                                                <path
-                                                    d="M89.1656 100.439L88.4707 172.076C108.483 172.266 126.679 164.416 139.924 151.578C153.17 138.741 161.455 120.905 161.637 101.126L89.1656 100.439Z"
-                                                    fill="#FF82AC" />
-                                                <path opacity="0.08"
-                                                    d="M89.0912 108.225L89.1661 100.438L8.54858 99.6777C8.5272 102.309 8.6341 104.908 8.8586 107.465L89.0912 108.225Z"
-                                                    fill="url(#paint1_linear_112_1791)" />
-                                                <path
-                                                    d="M89.1657 100.439L88.6953 148.789C102.208 148.915 114.492 143.622 123.429 134.958C132.366 126.294 137.957 114.26 138.086 100.904L89.1657 100.439Z"
-                                                    fill="#FF6195" />
-                                                <path opacity="0.83"
-                                                    d="M121.601 83.6399C115.315 77.311 106.592 73.3488 96.906 73.2537C87.2204 73.1586 78.422 76.9623 72.0184 83.1644C65.6147 89.3771 61.6058 97.9988 61.5096 107.571C61.4134 117.144 65.262 125.84 71.5373 132.169C77.8234 138.498 86.5469 142.46 96.2325 142.555C105.918 142.65 114.716 138.846 121.12 132.644C127.524 126.431 131.533 117.81 131.629 108.237C131.725 98.6645 127.887 89.9688 121.601 83.6399Z"
-                                                    fill="url(#paint2_radial_112_1791)" fill-opacity="0.5" />
-                                                <path
-                                                    d="M114.192 76.1692C107.906 69.8403 99.1825 65.8781 89.4968 65.783C79.8112 65.6879 71.0129 69.4916 64.6092 75.6937C58.2056 81.9064 54.1966 90.5282 54.1004 100.101C54.0042 109.673 57.8528 118.369 64.1281 124.698C70.4142 131.027 79.1377 134.989 88.8233 135.084C98.509 135.179 107.307 131.376 113.711 125.173C120.115 118.961 124.124 110.339 124.22 100.766C124.316 91.1938 120.478 82.4981 114.192 76.1692Z"
-                                                    fill="white" />
-                                                <defs>
-                                                    <radialGradient id="paint0_radial_112_1791" cx="0" cy="0" r="1"
-                                                        gradientUnits="userSpaceOnUse"
-                                                        gradientTransform="translate(94.4912 109.965) rotate(0.537943) scale(77.0496 76.1508)">
-                                                        <stop />
-                                                        <stop offset="1" stop-opacity="0" />
-                                                    </radialGradient>
-                                                    <linearGradient id="paint1_linear_112_1791" x1="48.7637"
-                                                        y1="109.401" x2="48.8498" y2="100.238"
-                                                        gradientUnits="userSpaceOnUse">
-                                                        <stop stop-color="white" />
-                                                        <stop offset="1" />
-                                                    </linearGradient>
-                                                    <radialGradient id="paint2_radial_112_1791" cx="0" cy="0" r="1"
-                                                        gradientUnits="userSpaceOnUse"
-                                                        gradientTransform="translate(96.577 107.904) rotate(0.537943) scale(35.0598 34.6508)">
-                                                        <stop />
-                                                        <stop offset="1" stop-opacity="0" />
-                                                    </radialGradient>
-                                                </defs>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-7">
-                                        <div class="contentItem">
-                                            <!-- single item start  -->
-                                            <div
-                                                class="innerItem d-flex justify-content-between flex-wrap align-items-center">
-                                                <div class="priceTitle d-flex gap-3 flex-wrap align-items-center">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
-                                                        viewBox="0 0 15 15" fill="none">
-                                                        <circle cx="7.5" cy="7.5" r="7.5" fill="#4C78FF" />
-                                                    </svg>
-                                                    <span>Phone Numbers</span>
-                                                </div>
-                                                <div class="price"><span>$72387</span></div>
-                                            </div>
-                                            <!-- single item end -->
-
-                                            <!-- single item start  -->
-                                            <div
-                                                class="innerItem d-flex justify-content-between flex-wrap align-items-center">
-                                                <div class="priceTitle d-flex gap-3 flex-wrap align-items-center">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
-                                                        viewBox="0 0 15 15" fill="none">
-                                                        <circle cx="7.5" cy="7.5" r="7.5" fill="#16DBCC" />
-                                                    </svg>
-                                                    <span>Subscriptions</span>
-                                                </div>
-                                                <div class="price"><span>$6213</span></div>
-                                            </div>
-                                            <!-- single item end -->
-                                            <!-- single item start  -->
-                                            <div
-                                                class="innerItem d-flex justify-content-between flex-wrap align-items-center">
-                                                <div class="priceTitle d-flex gap-3 flex-wrap align-items-center">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
-                                                        viewBox="0 0 15 15" fill="none">
-                                                        <circle cx="7.5" cy="7.5" r="7.5" fill="#FFBB38" />
-                                                    </svg>
-                                                    <span>SMS Purchase</span>
-                                                </div>
-                                                <div class="price"><span>$6215</span></div>
-                                            </div>
-                                            <!-- single item end -->
-                                            <!-- single item start  -->
-                                            <div
-                                                class="innerItem d-flex justify-content-between flex-wrap align-items-center">
-                                                <div class="priceTitle d-flex gap-3 flex-wrap align-items-center">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
-                                                        viewBox="0 0 15 15" fill="none">
-                                                        <circle cx="7.5" cy="7.5" r="7.5" fill="#FF82AC" />
-                                                    </svg>
-                                                    <span>Total</span>
-                                                </div>
-                                                <div class="price"><span>$621533</span></div>
-                                            </div>
-                                            <!-- single item end -->
-
-                                        </div>
-                                    </div>
-                                </div>
+                                <div class="" id="chart"></div>
                             </div>
                         </div>
                     </div>
@@ -726,63 +625,205 @@
             <!-- Orders Overview start  -->
             <div class="ordersOverview">
                 <!-- .row start  -->
-                <div class="row">
+                <div class="row flex-row-reverse">
+                    <!-- single item start  -->
+                    <div class="col-xl-4">
+                        <div class="SuccessItem">
+                            <div class="row gy-lg-0 gx-lg-3 g-2">
+                                <div class="col-xl-12 col-4">
+                                    <!-- single item start  -->
+                                    <a href="" class="w-100 d-block item">
+                                        <span
+                                            class="d-xl-flex text-lg-start text-center flex-row-reverse justify-content-between flex-wrap ">
+                                            <div class="imgRight">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="62" height="60"
+                                                    viewBox="0 0 62 60" fill="none">
+                                                    <path opacity="0.21" fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M0.55957 30V37C0.55957 49.7025 10.857 60 23.5596 60H30.9137H38.2679C50.9704 60 61.2679 49.7025 61.2679 37V30V23C61.2679 10.2975 50.9705 0 38.2679 0H30.9137H23.5596C10.857 0 0.55957 10.2975 0.55957 23V30Z"
+                                                        fill="#00B69B" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M15.7363 24.3171L28.7891 31.7652C28.9297 31.8454 29.077 31.9034 29.2271 31.9401V46.3854L16.6673 39.0392C16.0902 38.7017 15.7363 38.0882 15.7363 37.4256V24.3171ZM46.0908 24.1191V37.4256C46.0908 38.0882 45.7369 38.7017 45.1599 39.0392L32.6001 46.3854V31.8136C32.6307 31.7985 32.661 31.7824 32.691 31.7652L46.0908 24.1191Z"
+                                                        fill="#00B69B" />
+                                                    <path opacity="0.499209" fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M16.1465 20.7014C16.3059 20.5024 16.5072 20.3343 16.7418 20.2108L30.0217 13.2201C30.5792 12.9266 31.2479 12.9266 31.8054 13.2201L45.0854 20.2108C45.2662 20.306 45.4272 20.4277 45.5646 20.5697L31.0045 28.8778C30.9088 28.9325 30.8205 28.995 30.7401 29.064C30.6596 28.995 30.5713 28.9325 30.4756 28.8778L16.1465 20.7014Z"
+                                                        fill="#00B69B" />
+                                                </svg>
+                                            </div>
+                                            <span class="leftTitle pt-xl-0 pt-3">
+                                                <span class="titleText d-block">Success Orders</span>
+                                                <span class="titleNumber d-block">10293</span>
+                                            </span>
+
+                                        </span>
+                                        <span class="d-inline-flex align-items-center itemButtom">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="24"
+                                                viewBox="0 0 26 24" fill="none">
+                                                <path
+                                                    d="M17.1633 6L19.4804 8.29L14.5427 13.17L10.4955 9.17L2.99805 16.59L4.42469 18L10.4955 12L14.5427 16L20.9171 9.71L23.2342 12V6H17.1633Z"
+                                                    fill="#00B69B" />
+                                            </svg>
+                                            <span>
+                                                <span class="uptodownGreenText">1.3% </span>
+                                                <span class="uptoDonwtext">Up from past week</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                    <!-- single item end -->
+                                </div>
+                                <div class="col-xl-12 col-4">
+                                    <!-- single item start  -->
+                                    <a href="" class="w-100 d-block item">
+                                        <span
+                                            class="d-xl-flex text-lg-start text-center flex-row-reverse justify-content-between flex-wrap align-items-center">
+                                            <div class="imgRight">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="62" height="60"
+                                                    viewBox="0 0 62 60" fill="none">
+                                                    <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M0.55957 30V37C0.55957 49.7025 10.857 60 23.5596 60H30.9137H38.2679C50.9704 60 61.2679 49.7025 61.2679 37V30V23C61.2679 10.2975 50.9705 0 38.2679 0H30.9137H23.5596C10.857 0 0.55957 10.2975 0.55957 23V30Z"
+                                                        fill="#EF3826" />
+                                                    <path opacity="0.78" fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M29.5295 23.8069C29.5498 23.5466 29.7669 23.3457 30.028 23.3457H30.4625C30.7192 23.3457 30.9342 23.54 30.96 23.7954L31.589 30.0124L36.0567 32.5355C36.2137 32.6242 36.3108 32.7906 36.3108 32.9709V33.3598C36.3108 33.6888 35.9984 33.9282 35.6807 33.8425L29.2914 32.1203C29.0592 32.0577 28.9044 31.8386 28.9231 31.5988L29.5295 23.8069Z"
+                                                        fill="#EF3826" />
+                                                    <path opacity="0.901274" fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M23.5439 14.9791C23.2781 14.666 22.7657 14.785 22.6699 15.1819L21.0148 22.0399C20.9366 22.364 21.1968 22.6714 21.5333 22.6526L28.6715 22.2528C29.0845 22.2297 29.2932 21.7508 29.0269 21.4373L27.2006 19.2861C28.3795 18.8879 29.6297 18.6798 30.9133 18.6798C37.2464 18.6798 42.3805 23.754 42.3805 30.0132C42.3805 36.2724 37.2464 41.3465 30.9133 41.3465C24.5802 41.3465 19.4462 36.2724 19.4462 30.0132C19.4462 28.9624 19.5902 27.9333 19.8709 26.9441L17.273 26.2239C16.931 27.4291 16.748 28.7 16.748 30.0132C16.748 37.7452 23.0901 44.0132 30.9133 44.0132C38.7366 44.0132 45.0786 37.7452 45.0786 30.0132C45.0786 22.2812 38.7366 16.0132 30.9133 16.0132C28.9451 16.0132 27.0707 16.4099 25.3674 17.1269L23.5439 14.9791Z"
+                                                        fill="#EF3826" />
+                                                </svg>
+                                            </div>
+                                            <span class="leftTitle pt-xl-0 pt-3">
+                                                <span class="titleText d-block">Failed Orders</span>
+                                                <span class="titleNumber d-block">2040</span>
+                                            </span>
+
+                                        </span>
+                                        <span class="d-inline-flex align-items-center itemButtom">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="24"
+                                                viewBox="0 0 26 24" fill="none">
+                                                <path
+                                                    d="M17.1633 6L19.4804 8.29L14.5427 13.17L10.4955 9.17L2.99805 16.59L4.42469 18L10.4955 12L14.5427 16L20.9171 9.71L23.2342 12V6H17.1633Z"
+                                                    fill="#00B69B" />
+                                            </svg>
+                                            <span>
+                                                <span class="uptodownGreenText">1.8% </span>
+                                                <span class="uptoDonwtext"> Up from yesterday</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                    <!-- single item end -->
+                                </div>
+                                <div class="col-xl-12 col-4">
+                                    <!-- single item start  -->
+                                    <a href="" class="w-100 d-block item">
+                                        <span
+                                            class="d-xl-flex text-lg-start text-center flex-row-reverse justify-content-between flex-wrap align-items-center">
+
+                                            <div class="imgRight">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="62" height="60"
+                                                    viewBox="0 0 62 60" fill="none">
+                                                    <path opacity="0.21" fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M0.55957 30V37C0.55957 49.7025 10.857 60 23.5596 60H30.9137H38.2679C50.9704 60 61.2679 49.7025 61.2679 37V30V23C61.2679 10.2975 50.9705 0 38.2679 0H30.9137H23.5596C10.857 0 0.55957 10.2975 0.55957 23V30Z"
+                                                        fill="#53AAF9" />
+                                                    <path
+                                                        d="M19.8959 40.8889H43.5047C44.3739 40.8889 45.0786 41.5853 45.0786 42.4444C45.0786 43.3036 44.3739 44 43.5047 44H18.322C17.4527 44 16.748 43.3036 16.748 42.4444V17.5556C16.748 16.6964 17.4527 16 18.322 16C19.1912 16 19.8959 16.6964 19.8959 17.5556V40.8889Z"
+                                                        fill="#53AAF9" />
+                                                    <path opacity="0.5"
+                                                        d="M25.7661 34.176C25.1716 34.8027 24.1756 34.8345 23.5414 34.2469C22.9073 33.6593 22.8751 32.6749 23.4696 32.0481L29.3718 25.8259C29.9468 25.2198 30.9022 25.1672 31.5417 25.7065L36.2001 29.6353L42.2696 22.037C42.8082 21.3627 43.7979 21.2477 44.4802 21.78C45.1624 22.3123 45.2789 23.2905 44.7402 23.9648L37.6576 32.8315C37.1044 33.524 36.0797 33.6237 35.4006 33.0509L30.641 29.0367L25.7661 34.176Z"
+                                                        fill="#53AAF9" />
+                                                </svg>
+                                            </div>
+                                            <span class="leftTitle pt-xl-0 pt-3">
+                                                <span class="titleText d-block">Pending Orders</span>
+                                                <span class="titleNumber d-block">$89,000</span>
+                                            </span>
+                                        </span>
+                                        <span class="d-inline-flex align-items-center itemButtom">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="24"
+                                                viewBox="0 0 26 24" fill="none">
+                                                <path
+                                                    d="M17.1633 18L19.4804 15.71L14.5427 10.83L10.4955 14.83L2.99805 7.41L4.42469 6L10.4955 12L14.5427 8L20.9171 14.29L23.2342 12V18H17.1633Z"
+                                                    fill="#F93C65" />
+                                            </svg>
+                                            <span>
+                                                <span class="uptodownRedText">4.3% </span>
+                                                <span class="uptoDonwtext">Down from yesterday</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                    <!-- single item end -->
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+                        </div>
+                    </div>
+                    <!-- single item emd -->
                     <!-- single item start  -->
                     <div class="col-xl-8">
                         <div class="ordersOverviewTable">
                             <h2>Orders Overview</h2>
                             <div class="table-responsive ">
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">Order ID</th>
-                                            <th scope="col">Customer Name</th>
-                                            <th scope="col">Order Type</th>
-                                            <th scope="col">Date</th>
-                                            <th scope="col" class="text-end">Status</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>00001</td>
-                                            <td>Christine Brooks</td>
-                                            <td>Phone Purchase</td>
-                                            <td>14 Feb 2019</td>
-                                            <td class="text-end"><button>Successful</button></td>
-                                        </tr>
+                                <div class="table-container">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Order ID</th>
+                                                <th scope="col">Customer Name</th>
+                                                <th scope="col">Order Type</th>
+                                                <th scope="col">Date</th>
+                                                <th scope="col" class="text-end">Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>00001</td>
+                                                <td>Christine Brooks</td>
+                                                <td>Phone Purchase</td>
+                                                <td>14 Feb 2019</td>
+                                                <td class="text-end"><button>Successful</button></td>
+                                            </tr>
 
-                                        <tr>
-                                            <td>00002</td>
-                                            <td>Rosie Pearson</td>
-                                            <td>Subscription Purchase</td>
-                                            <td>14 Feb 2019</td>
-                                            <td class="text-end"><button class="Pending">Pending</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>00003</td>
-                                            <td>Darrell Caldwell</td>
-                                            <td>SMS Credit Purchase</td>
-                                            <td>14 Feb 2019</td>
-                                            <td class="text-end"><button class="Failed">Failed</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>00004</td>
-                                            <td>Gilbert Johnston</td>
-                                            <td>SMS Credit Purchase</td>
-                                            <td>14 Feb 2019</td>
-                                            <td class="text-end"><button>Successful</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>00005</td>
-                                            <td>Alan Cain</td>
-                                            <td>SMS Credit Purchase</td>
-                                            <td>14 Feb 2019</td>
-                                            <td class="text-end"><button>Successful</button></td>
-                                        </tr>
+                                            <tr>
+                                                <td>00002</td>
+                                                <td>Rosie Pearson</td>
+                                                <td>Subscription Purchase</td>
+                                                <td>14 Feb 2019</td>
+                                                <td class="text-end"><button class="Pending">Pending</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>00003</td>
+                                                <td>Darrell Caldwell</td>
+                                                <td>SMS Credit Purchase</td>
+                                                <td>14 Feb 2019</td>
+                                                <td class="text-end"><button class="Failed">Failed</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>00004</td>
+                                                <td>Gilbert Johnston</td>
+                                                <td>SMS Credit Purchase</td>
+                                                <td>14 Feb 2019</td>
+                                                <td class="text-end"><button>Successful</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>00005</td>
+                                                <td>Alan Cain</td>
+                                                <td>SMS Credit Purchase</td>
+                                                <td>14 Feb 2019</td>
+                                                <td class="text-end"><button>Successful</button></td>
+                                            </tr>
 
 
-                                    </tbody>
-                                </table>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="arrows">
+                                    <button class="arrow-btn next-btn btn"><img src="./img/right.svg"
+                                            alt="img"></button>
+                                    <button class="arrow-btn prev-btn btn"><img src="./img/left.svg" alt="img"></button>
+                                </div>
                             </div>
                             <nav aria-label="Page navigation example">
                                 <ul class="pagination justify-content-end">
@@ -813,125 +854,7 @@
                     </div>
                     <!-- single item emd -->
 
-                    <!-- single item start  -->
-                    <div class="col-xl-4">
-                        <div class="SuccessItem">
 
-                            <!-- single item start  -->
-                            <a href="" class="w-100 d-block item">
-                                <span class="d-flex justify-content-between flex-wrap align-items-center">
-                                    <span class="leftTitle">
-                                        <span class="titleText d-block">Success Orders</span>
-                                        <span class="titleNumber d-block">10293</span>
-                                    </span>
-                                    <div class="imgRight">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="62" height="60"
-                                            viewBox="0 0 62 60" fill="none">
-                                            <path opacity="0.21" fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M0.55957 30V37C0.55957 49.7025 10.857 60 23.5596 60H30.9137H38.2679C50.9704 60 61.2679 49.7025 61.2679 37V30V23C61.2679 10.2975 50.9705 0 38.2679 0H30.9137H23.5596C10.857 0 0.55957 10.2975 0.55957 23V30Z"
-                                                fill="#00B69B" />
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M15.7363 24.3171L28.7891 31.7652C28.9297 31.8454 29.077 31.9034 29.2271 31.9401V46.3854L16.6673 39.0392C16.0902 38.7017 15.7363 38.0882 15.7363 37.4256V24.3171ZM46.0908 24.1191V37.4256C46.0908 38.0882 45.7369 38.7017 45.1599 39.0392L32.6001 46.3854V31.8136C32.6307 31.7985 32.661 31.7824 32.691 31.7652L46.0908 24.1191Z"
-                                                fill="#00B69B" />
-                                            <path opacity="0.499209" fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M16.1465 20.7014C16.3059 20.5024 16.5072 20.3343 16.7418 20.2108L30.0217 13.2201C30.5792 12.9266 31.2479 12.9266 31.8054 13.2201L45.0854 20.2108C45.2662 20.306 45.4272 20.4277 45.5646 20.5697L31.0045 28.8778C30.9088 28.9325 30.8205 28.995 30.7401 29.064C30.6596 28.995 30.5713 28.9325 30.4756 28.8778L16.1465 20.7014Z"
-                                                fill="#00B69B" />
-                                        </svg>
-                                    </div>
-                                </span>
-                                <span class="d-inline-flex align-items-center itemButtom">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="24" viewBox="0 0 26 24"
-                                        fill="none">
-                                        <path
-                                            d="M17.1633 6L19.4804 8.29L14.5427 13.17L10.4955 9.17L2.99805 16.59L4.42469 18L10.4955 12L14.5427 16L20.9171 9.71L23.2342 12V6H17.1633Z"
-                                            fill="#00B69B" />
-                                    </svg>
-                                    <span>
-                                        <span class="uptodownGreenText">1.3% </span>
-                                        <span class="uptoDonwtext">Up from past week</span>
-                                    </span>
-                                </span>
-                            </a>
-                            <!-- single item end -->
-
-                            <!-- single item start  -->
-                            <a href="" class="w-100 d-block item">
-                                <span class="d-flex justify-content-between flex-wrap align-items-center">
-                                    <span class="leftTitle">
-                                        <span class="titleText d-block">Failed Orders</span>
-                                        <span class="titleNumber d-block">2040</span>
-                                    </span>
-                                    <div class="imgRight">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="62" height="60"
-                                            viewBox="0 0 62 60" fill="none">
-                                            <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M0.55957 30V37C0.55957 49.7025 10.857 60 23.5596 60H30.9137H38.2679C50.9704 60 61.2679 49.7025 61.2679 37V30V23C61.2679 10.2975 50.9705 0 38.2679 0H30.9137H23.5596C10.857 0 0.55957 10.2975 0.55957 23V30Z"
-                                                fill="#EF3826" />
-                                            <path opacity="0.78" fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M29.5295 23.8069C29.5498 23.5466 29.7669 23.3457 30.028 23.3457H30.4625C30.7192 23.3457 30.9342 23.54 30.96 23.7954L31.589 30.0124L36.0567 32.5355C36.2137 32.6242 36.3108 32.7906 36.3108 32.9709V33.3598C36.3108 33.6888 35.9984 33.9282 35.6807 33.8425L29.2914 32.1203C29.0592 32.0577 28.9044 31.8386 28.9231 31.5988L29.5295 23.8069Z"
-                                                fill="#EF3826" />
-                                            <path opacity="0.901274" fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M23.5439 14.9791C23.2781 14.666 22.7657 14.785 22.6699 15.1819L21.0148 22.0399C20.9366 22.364 21.1968 22.6714 21.5333 22.6526L28.6715 22.2528C29.0845 22.2297 29.2932 21.7508 29.0269 21.4373L27.2006 19.2861C28.3795 18.8879 29.6297 18.6798 30.9133 18.6798C37.2464 18.6798 42.3805 23.754 42.3805 30.0132C42.3805 36.2724 37.2464 41.3465 30.9133 41.3465C24.5802 41.3465 19.4462 36.2724 19.4462 30.0132C19.4462 28.9624 19.5902 27.9333 19.8709 26.9441L17.273 26.2239C16.931 27.4291 16.748 28.7 16.748 30.0132C16.748 37.7452 23.0901 44.0132 30.9133 44.0132C38.7366 44.0132 45.0786 37.7452 45.0786 30.0132C45.0786 22.2812 38.7366 16.0132 30.9133 16.0132C28.9451 16.0132 27.0707 16.4099 25.3674 17.1269L23.5439 14.9791Z"
-                                                fill="#EF3826" />
-                                        </svg>
-                                    </div>
-                                </span>
-                                <span class="d-inline-flex align-items-center itemButtom">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="24" viewBox="0 0 26 24"
-                                        fill="none">
-                                        <path
-                                            d="M17.1633 6L19.4804 8.29L14.5427 13.17L10.4955 9.17L2.99805 16.59L4.42469 18L10.4955 12L14.5427 16L20.9171 9.71L23.2342 12V6H17.1633Z"
-                                            fill="#00B69B" />
-                                    </svg>
-                                    <span>
-                                        <span class="uptodownGreenText">1.8% </span>
-                                        <span class="uptoDonwtext"> Up from yesterday</span>
-                                    </span>
-                                </span>
-                            </a>
-                            <!-- single item end -->
-
-                            <!-- single item start  -->
-                            <a href="" class="w-100 d-block item">
-                                <span class="d-flex justify-content-between flex-wrap align-items-center">
-                                    <span class="leftTitle">
-                                        <span class="titleText d-block">Pending Orders</span>
-                                        <span class="titleNumber d-block">$89,000</span>
-                                    </span>
-                                    <div class="imgRight">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="62" height="60"
-                                            viewBox="0 0 62 60" fill="none">
-                                            <path opacity="0.21" fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M0.55957 30V37C0.55957 49.7025 10.857 60 23.5596 60H30.9137H38.2679C50.9704 60 61.2679 49.7025 61.2679 37V30V23C61.2679 10.2975 50.9705 0 38.2679 0H30.9137H23.5596C10.857 0 0.55957 10.2975 0.55957 23V30Z"
-                                                fill="#53AAF9" />
-                                            <path
-                                                d="M19.8959 40.8889H43.5047C44.3739 40.8889 45.0786 41.5853 45.0786 42.4444C45.0786 43.3036 44.3739 44 43.5047 44H18.322C17.4527 44 16.748 43.3036 16.748 42.4444V17.5556C16.748 16.6964 17.4527 16 18.322 16C19.1912 16 19.8959 16.6964 19.8959 17.5556V40.8889Z"
-                                                fill="#53AAF9" />
-                                            <path opacity="0.5"
-                                                d="M25.7661 34.176C25.1716 34.8027 24.1756 34.8345 23.5414 34.2469C22.9073 33.6593 22.8751 32.6749 23.4696 32.0481L29.3718 25.8259C29.9468 25.2198 30.9022 25.1672 31.5417 25.7065L36.2001 29.6353L42.2696 22.037C42.8082 21.3627 43.7979 21.2477 44.4802 21.78C45.1624 22.3123 45.2789 23.2905 44.7402 23.9648L37.6576 32.8315C37.1044 33.524 36.0797 33.6237 35.4006 33.0509L30.641 29.0367L25.7661 34.176Z"
-                                                fill="#53AAF9" />
-                                        </svg>
-                                    </div>
-                                </span>
-                                <span class="d-inline-flex align-items-center itemButtom">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="24" viewBox="0 0 26 24"
-                                        fill="none">
-                                        <path
-                                            d="M17.1633 18L19.4804 15.71L14.5427 10.83L10.4955 14.83L2.99805 7.41L4.42469 6L10.4955 12L14.5427 8L20.9171 14.29L23.2342 12V18H17.1633Z"
-                                            fill="#F93C65" />
-                                    </svg>
-                                    <span>
-                                        <span class="uptodownRedText">4.3% </span>
-                                        <span class="uptoDonwtext">Down from yesterday</span>
-                                    </span>
-                                </span>
-                            </a>
-                            <!-- single item end -->
-
-
-                        </div>
-                    </div>
-                    <!-- single item emd -->
 
                 </div>
                 <!-- .row end -->
@@ -942,49 +865,55 @@
                 <div class="ordersOverviewTable pb-0">
                     <h2>Customer</h2>
                     <div class="table-responsive">
-                        <table class="table mb-0">
-                            <thead>
-                                <tr>
-                                    <th scope="col"> ID</th>
-                                    <th scope="col"> Name</th>
-                                    <th scope="col">Email</th>
-                                    <th scope="col">Date Registered</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>001</td>
-                                    <td>Kadin Torff</td>
-                                    <td>Martin@gmail.com</td>
-                                    <td>02-03-2023 3:00pm</td>
-                                </tr>
-                                <tr>
-                                    <td>002</td>
-                                    <td>Gretchen Carder</td>
-                                    <td>Leo@gmail.com</td>
-                                    <td>02-03-2023 3:00pm</td>
-                                </tr>
+                        <div class="table-container">
+                            <table class="table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th scope="col"> ID</th>
+                                        <th scope="col"> Name</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Date Registered</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>001</td>
+                                        <td>Kadin Torff</td>
+                                        <td>Martin@gmail.com</td>
+                                        <td>02-03-2023 3:00pm</td>
+                                    </tr>
+                                    <tr>
+                                        <td>002</td>
+                                        <td>Gretchen Carder</td>
+                                        <td>Leo@gmail.com</td>
+                                        <td>02-03-2023 3:00pm</td>
+                                    </tr>
 
-                                <tr>
-                                    <td>003</td>
-                                    <td>Madelyn Rhiel Madsen</td>
-                                    <td>Corey@gmail.com</td>
-                                    <td>02-03-2023 3:00pm</td>
-                                </tr>
-                                <tr>
-                                    <td>004</td>
-                                    <td>Zaire Korsgaard</td>
-                                    <td>Jordyn@gmail.com</td>
-                                    <td>02-03-2023 3:00pm</td>
-                                </tr>
-                                <tr>
-                                    <td>001</td>
-                                    <td>Tiana Kenter</td>
-                                    <td>Zaire@gmail.com</td>
-                                    <td>02-03-2023 3:00pm</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                                    <tr>
+                                        <td>003</td>
+                                        <td>Madelyn Rhiel Madsen</td>
+                                        <td>Corey@gmail.com</td>
+                                        <td>02-03-2023 3:00pm</td>
+                                    </tr>
+                                    <tr>
+                                        <td>004</td>
+                                        <td>Zaire Korsgaard</td>
+                                        <td>Jordyn@gmail.com</td>
+                                        <td>02-03-2023 3:00pm</td>
+                                    </tr>
+                                    <tr>
+                                        <td>001</td>
+                                        <td>Tiana Kenter</td>
+                                        <td>Zaire@gmail.com</td>
+                                        <td>02-03-2023 3:00pm</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="arrows">
+                            <button class="arrow-btn next-btn btn"><img src="./img/right.svg" alt="img"></button>
+                            <button class="arrow-btn prev-btn btn"><img src="./img/left.svg" alt="img"></button>
+                        </div>
                     </div>
 
                 </div>
@@ -994,7 +923,7 @@
             <!-- Campaigns Overview start  -->
             <div class="CampaignsOverview">
                 <div class="ordersOverviewTable pb-0">
-                    <div class="d-flex justify-content-between align-items-center topITem">
+                    <div class="d-sm-flex text-sm-start text-center justify-content-between align-items-center topITem">
                         <h2>Campaigns Overview</h2>
                         <div>
                             <select class="form-select" aria-label="Default select example">
@@ -1007,9 +936,9 @@
                     </div>
                     <!-- CampaignsOverview item start  -->
                     <div class="CampaignsOverviewIem ">
-                        <div class="row">
+                        <div class="row gy-lg-0 gx-lg-3 g-2">
                             <!-- single item start  -->
-                            <div class="col-xl-3">
+                            <div class="col-xl-3   col-6">
                                 <a href="" class="item d-flex justify-content-center align-items-center d-block">
                                     <span class="itemImg">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70"
@@ -1030,7 +959,7 @@
                             <!-- single item end -->
 
                             <!-- single item start  -->
-                            <div class="col-xl-3">
+                            <div class="col-xl-3   col-6">
                                 <a href="" class="item d-flex justify-content-center align-items-center d-block">
                                     <span class="itemImg">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70"
@@ -1048,7 +977,7 @@
                             </div>
                             <!-- single item end -->
                             <!-- single item start  -->
-                            <div class="col-xl-3">
+                            <div class="col-xl-3 col-6">
                                 <a href="" class="item d-flex justify-content-center align-items-center d-block">
                                     <span class="itemImg">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70"
@@ -1067,7 +996,7 @@
                             </div>
                             <!-- single item end -->
                             <!-- single item start  -->
-                            <div class="col-xl-3">
+                            <div class="col-xl-3 col-6">
                                 <a href="" class="item d-flex justify-content-center align-items-center d-block">
                                     <span class="itemImg">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70"
@@ -1090,44 +1019,50 @@
                     </div>
                     <!-- CampaignsOverview item end -->
                     <div class="table-responsive">
-                        <table class="table mb-0">
-                            <thead>
-                                <tr>
-                                    <th scope="col">ID</th>
-                                    <th scope="col">Campaign Name</th>
-                                    <th scope="col">Next Run Date</th>
-                                    <th scope="col">Status</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>00001</td>
-                                    <td>Christine Brooks</td>
-                                    <td>14 Feb 2019</td>
-                                    <td><button>Successful</button></td>
-                                </tr>
+                        <div class="table-container">
+                            <table class="table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Campaign Name</th>
+                                        <th scope="col">Next Run Date</th>
+                                        <th scope="col">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>00001</td>
+                                        <td>Christine Brooks</td>
+                                        <td>14 Feb 2019</td>
+                                        <td><button>Successful</button></td>
+                                    </tr>
 
-                                <tr>
-                                    <td>00002</td>
-                                    <td>Christine Brooks</td>
-                                    <td>14 Feb 2019</td>
-                                    <td><button>Successful</button></td>
-                                </tr>
-                                <tr>
-                                    <td>00003</td>
-                                    <td>Christine Brooks</td>
-                                    <td>14 Feb 2019</td>
-                                    <td><button>Successful</button></td>
-                                </tr>
-                                <tr>
-                                    <td>00004</td>
-                                    <td>Christine Brooks</td>
-                                    <td>14 Feb 2019</td>
-                                    <td><button>Successful</button></td>
-                                </tr>
+                                    <tr>
+                                        <td>00002</td>
+                                        <td>Christine Brooks</td>
+                                        <td>14 Feb 2019</td>
+                                        <td><button>Successful</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>00003</td>
+                                        <td>Christine Brooks</td>
+                                        <td>14 Feb 2019</td>
+                                        <td><button>Successful</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>00004</td>
+                                        <td>Christine Brooks</td>
+                                        <td>14 Feb 2019</td>
+                                        <td><button>Successful</button></td>
+                                    </tr>
 
-                            </tbody>
-                        </table>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="arrows">
+                            <button class="arrow-btn next-btn btn"><img src="./img/right.svg" alt="img"></button>
+                            <button class="arrow-btn prev-btn btn"><img src="./img/left.svg" alt="img"></button>
+                        </div>
                     </div>
 
                 </div>
@@ -1136,7 +1071,7 @@
             <!-- Subscription Overview start  -->
             <div class="CampaignsOverview">
                 <div class="ordersOverviewTable pb-0">
-                    <div class="d-flex justify-content-between align-items-center topITem">
+                    <div class="d-lg-flex text-lg-start text-center justify-content-between align-items-center topITem">
                         <h2>Subscription Overview</h2>
                         <div>
                             <select class="form-select" aria-label="Default select example">
@@ -1149,9 +1084,9 @@
                     </div>
                     <!-- CampaignsOverview item start  -->
                     <div class="CampaignsOverviewIem ">
-                        <div class="row">
+                        <div class="row gy-lg-0 gx-lg-3 g-2">
                             <!-- single item start  -->
-                            <div class="col-xl-3">
+                            <div class="col-xl-3 col-6">
                                 <a href="" class="item d-flex justify-content-center align-items-center d-block">
                                     <span class="itemImg">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70"
@@ -1172,7 +1107,7 @@
                             <!-- single item end -->
 
                             <!-- single item start  -->
-                            <div class="col-xl-3">
+                            <div class="col-xl-3  col-6">
                                 <a href="" class="item d-flex justify-content-center align-items-center d-block">
                                     <span class="itemImg">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70"
@@ -1190,7 +1125,7 @@
                             </div>
                             <!-- single item end -->
                             <!-- single item start  -->
-                            <div class="col-xl-3">
+                            <div class="col-xl-3  col-6">
                                 <a href="" class="item d-flex justify-content-center align-items-center d-block">
                                     <span class="itemImg">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70"
@@ -1209,7 +1144,7 @@
                             </div>
                             <!-- single item end -->
                             <!-- single item start  -->
-                            <div class="col-xl-3">
+                            <div class="col-xl-3  col-6">
                                 <a href="" class="item d-flex justify-content-center align-items-center d-block">
                                     <span class="itemImg">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70"
@@ -1232,49 +1167,55 @@
                     </div>
                     <!-- CampaignsOverview item end -->
                     <div class="table-responsive">
-                        <table class="table mb-0">
-                            <thead>
-                                <tr>
-                                    <th scope="col">ID</th>
-                                    <th scope="col">Customer Name</th>
-                                    <th scope="col">Plan Name</th>
-                                    <th scope="col">Renew Date</th>
-                                    <th scope="col">Status</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>00001</td>
-                                    <td>Christine Brooks</td>
-                                    <td>Pro</td>
-                                    <td>14 Feb 2019</td>
-                                    <td><button>Successful</button></td>
-                                </tr>
+                        <div class="table-container">
+                            <table class="table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Customer Name</th>
+                                        <th scope="col">Plan Name</th>
+                                        <th scope="col">Renew Date</th>
+                                        <th scope="col">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>00001</td>
+                                        <td>Christine Brooks</td>
+                                        <td>Pro</td>
+                                        <td>14 Feb 2019</td>
+                                        <td><button>Successful</button></td>
+                                    </tr>
 
-                                <tr>
-                                    <td>00002</td>
-                                    <td>Christine Brooks</td>
-                                    <td>Pro</td>
-                                    <td>14 Feb 2019</td>
-                                    <td><button>Successful</button></td>
-                                </tr>
-                                <tr>
-                                    <td>00003</td>
-                                    <td>Christine Brooks</td>
-                                    <td>Pro</td>
-                                    <td>14 Feb 2019</td>
-                                    <td><button>Successful</button></td>
-                                </tr>
-                                <tr>
-                                    <td>00004</td>
-                                    <td>Christine Brooks</td>
-                                    <td>Pro</td>
-                                    <td>14 Feb 2019</td>
-                                    <td><button>Successful</button></td>
-                                </tr>
+                                    <tr>
+                                        <td>00002</td>
+                                        <td>Christine Brooks</td>
+                                        <td>Pro</td>
+                                        <td>14 Feb 2019</td>
+                                        <td><button>Successful</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>00003</td>
+                                        <td>Christine Brooks</td>
+                                        <td>Pro</td>
+                                        <td>14 Feb 2019</td>
+                                        <td><button>Successful</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>00004</td>
+                                        <td>Christine Brooks</td>
+                                        <td>Pro</td>
+                                        <td>14 Feb 2019</td>
+                                        <td><button>Successful</button></td>
+                                    </tr>
 
-                            </tbody>
-                        </table>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="arrows">
+                            <button class="arrow-btn next-btn btn"><img src="./img/right.svg" alt="img"></button>
+                            <button class="arrow-btn prev-btn btn"><img src="./img/left.svg" alt="img"></button>
+                        </div>
                     </div>
 
                 </div>
@@ -1288,7 +1229,8 @@
                     <!-- single item start  -->
                     <div class="col-xl-6">
                         <div class="salesOverviewRight">
-                            <div class="d-flex justify-content-between flex-wrap TitleArea align-items-center">
+                            <div
+                                class="d-flex justify-content-xl-between justify-content-center flex-wrap TitleArea align-items-center">
                                 <h2>SMS Overview</h2>
                                 <div>
                                     <select class="form-select" aria-label="Default select example">
@@ -1300,138 +1242,16 @@
                                 </div>
                             </div>
                             <div class="salesOverviewItem">
-                                <div class="row align-items-center">
-                                    <div class="col-xl-5">
-                                        <div class="imgItem">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="191" height="187"
-                                                viewBox="0 0 191 187" fill="none">
-                                                <path opacity="0.83"
-                                                    d="M149.494 56.6335C135.682 42.7183 116.503 34.0227 95.2286 33.8219C73.9544 33.6212 54.6045 41.9682 40.5357 55.6086C26.4669 69.2491 17.6579 88.2148 17.4548 109.241C17.2516 130.267 25.6972 149.391 39.4987 163.296C53.3002 177.2 72.4898 185.906 93.764 186.107C115.038 186.308 134.388 177.961 148.457 164.32C162.536 150.669 171.335 131.714 171.538 110.688C171.741 89.6623 163.295 70.5487 149.494 56.6335Z"
-                                                    fill="url(#paint0_radial_112_2366)" fill-opacity="0.5" />
-                                                <path
-                                                    d="M8.53895 99.6777C8.32514 121.676 17.1555 141.687 31.6092 156.247C46.0628 170.807 66.129 179.915 88.3867 180.126L89.1565 100.449L8.53895 99.6777Z"
-                                                    fill="#FFBB38" />
-                                                <path
-                                                    d="M40.2464 99.9746C40.1181 113.33 45.4741 125.47 54.251 134.303C63.0173 143.136 75.1938 148.662 88.7067 148.789L89.1771 100.439L40.2464 99.9746Z"
-                                                    fill="#FFB11F" />
-                                                <path
-                                                    d="M27.0866 37.9108C10.8904 53.6116 0.766442 75.4195 0.53125 99.6047L89.1667 100.439L90.0113 12.8381C65.5299 12.6057 43.2828 22.21 27.0866 37.9108Z"
-                                                    fill="#4C78FF" />
-                                                <path
-                                                    d="M54.9029 65.9208C45.9655 74.5848 40.3744 86.6192 40.2461 99.9744L89.1661 100.439L89.6365 52.0901C76.1236 51.9633 63.8402 57.2568 54.9029 65.9208Z"
-                                                    fill="#3464F3" />
-                                                <path
-                                                    d="M161.713 30.0915C143.496 11.7386 118.203 0.264146 90.1291 0L89.1562 100.439L190.781 101.4C191.059 73.6544 179.93 48.4337 161.713 30.0915Z"
-                                                    fill="#16DBCC" />
-                                                <path
-                                                    d="M124.082 66.5756C115.316 57.7426 103.14 52.2166 89.6266 52.0898L89.1562 100.439L138.076 100.904C138.215 87.5487 132.859 75.4086 124.082 66.5756Z"
-                                                    fill="#1EC6B8" />
-                                                <path
-                                                    d="M89.1675 100.439L88.4727 172.076C108.485 172.266 126.681 164.416 139.926 151.578C153.172 138.741 161.457 120.905 161.639 101.126L89.1675 100.439Z"
-                                                    fill="#FF82AC" />
-                                                <path opacity="0.08"
-                                                    d="M89.0922 108.225L89.1671 100.438L8.54955 99.6777C8.52817 102.309 8.63508 104.908 8.85958 107.465L89.0922 108.225Z"
-                                                    fill="url(#paint1_linear_112_2366)" />
-                                                <path
-                                                    d="M89.1657 100.439L88.6953 148.789C102.208 148.915 114.492 143.622 123.429 134.958C132.366 126.294 137.957 114.26 138.086 100.904L89.1657 100.439Z"
-                                                    fill="#FF6195" />
-                                                <path opacity="0.83"
-                                                    d="M121.601 83.6399C115.315 77.311 106.592 73.3488 96.906 73.2537C87.2204 73.1586 78.422 76.9623 72.0184 83.1644C65.6147 89.3771 61.6058 97.9988 61.5096 107.571C61.4134 117.144 65.262 125.84 71.5373 132.169C77.8234 138.498 86.5469 142.46 96.2325 142.555C105.918 142.65 114.716 138.846 121.12 132.644C127.524 126.431 131.533 117.81 131.629 108.237C131.725 98.6645 127.887 89.9688 121.601 83.6399Z"
-                                                    fill="url(#paint2_radial_112_2366)" fill-opacity="0.5" />
-                                                <path
-                                                    d="M114.193 76.1692C107.907 69.8403 99.1835 65.8781 89.4978 65.783C79.8122 65.6879 71.0138 69.4916 64.6102 75.6937C58.2065 81.9064 54.1976 90.5282 54.1014 100.101C54.0052 109.673 57.8538 118.369 64.1291 124.698C70.4152 131.027 79.1387 134.989 88.8243 135.084C98.51 135.179 107.308 131.376 113.712 125.173C120.116 118.961 124.125 110.339 124.221 100.766C124.317 91.1938 120.479 82.4981 114.193 76.1692Z"
-                                                    fill="white" />
-                                                <defs>
-                                                    <radialGradient id="paint0_radial_112_2366" cx="0" cy="0" r="1"
-                                                        gradientUnits="userSpaceOnUse"
-                                                        gradientTransform="translate(94.4922 109.965) rotate(0.537943) scale(77.0496 76.1508)">
-                                                        <stop />
-                                                        <stop offset="1" stop-opacity="0" />
-                                                    </radialGradient>
-                                                    <linearGradient id="paint1_linear_112_2366" x1="48.7647"
-                                                        y1="109.401" x2="48.8507" y2="100.238"
-                                                        gradientUnits="userSpaceOnUse">
-                                                        <stop stop-color="white" />
-                                                        <stop offset="1" />
-                                                    </linearGradient>
-                                                    <radialGradient id="paint2_radial_112_2366" cx="0" cy="0" r="1"
-                                                        gradientUnits="userSpaceOnUse"
-                                                        gradientTransform="translate(96.577 107.904) rotate(0.537943) scale(35.0598 34.6508)">
-                                                        <stop />
-                                                        <stop offset="1" stop-opacity="0" />
-                                                    </radialGradient>
-                                                </defs>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-7">
-                                        <div class="contentItem">
-                                            <!-- single item start  -->
-                                            <div
-                                                class="innerItem d-flex justify-content-between flex-wrap align-items-center">
-                                                <div class="priceTitle d-flex gap-3 flex-wrap align-items-center">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
-                                                        viewBox="0 0 15 15" fill="none">
-                                                        <circle cx="7.5" cy="7.5" r="7.5" fill="#4C78FF" />
-                                                    </svg>
-                                                    <span>Sent</span>
-                                                </div>
-                                                <div class="price"><span>2387</span></div>
-                                            </div>
-                                            <!-- single item end -->
-
-                                            <!-- single item start  -->
-                                            <div
-                                                class="innerItem d-flex justify-content-between flex-wrap align-items-center">
-                                                <div class="priceTitle d-flex gap-3 flex-wrap align-items-center">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
-                                                        viewBox="0 0 15 15" fill="none">
-                                                        <circle cx="7.5" cy="7.5" r="7.5" fill="#16DBCC" />
-                                                    </svg>
-                                                    <span>Failed</span>
-                                                </div>
-                                                <div class="price"><span>213</span></div>
-                                            </div>
-                                            <!-- single item end -->
-                                            <!-- single item start  -->
-                                            <div
-                                                class="innerItem d-flex justify-content-between flex-wrap align-items-center">
-                                                <div class="priceTitle d-flex gap-3 flex-wrap align-items-center">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
-                                                        viewBox="0 0 15 15" fill="none">
-                                                        <circle cx="7.5" cy="7.5" r="7.5" fill="#FFBB38" />
-                                                    </svg>
-                                                    <span>Pending</span>
-                                                </div>
-                                                <div class="price"><span>6215</span></div>
-                                            </div>
-                                            <!-- single item end -->
-                                            <!-- single item start  -->
-                                            <div
-                                                class="innerItem d-flex justify-content-between flex-wrap align-items-center">
-                                                <div class="priceTitle d-flex gap-3 flex-wrap align-items-center">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
-                                                        viewBox="0 0 15 15" fill="none">
-                                                        <circle cx="7.5" cy="7.5" r="7.5" fill="#FF82AC" />
-                                                    </svg>
-                                                    <span>Delivered</span>
-                                                </div>
-                                                <div class="price"><span>533</span></div>
-                                            </div>
-                                            <!-- single item end -->
-
-                                        </div>
-                                    </div>
-                                </div>
+                                <div class="" id="chart2"></div>
                             </div>
                         </div>
                     </div>
                     <!-- single item end -->
                     <!-- single item start  -->
                     <div class="col-xl-6">
-                        <div class="row salesItem gx-2">
+                        <div class="row salesItem gx-lg-2 gy-lg-3 g-2">
                             <!-- single item start  -->
-                            <div class="col-xl-6">
+                            <div class="col-6">
                                 <div class="item">
                                     <a href="">
                                         <span class="media align-items-center">
@@ -1462,7 +1282,7 @@
                             <!-- single item end -->
 
                             <!-- single item start  -->
-                            <div class="col-xl-6">
+                            <div class="col-6">
                                 <div class="item">
                                     <a href="">
                                         <span class="align-items-center media">
@@ -1484,7 +1304,7 @@
                             </div>
                             <!-- single item end -->
                             <!-- single item start  -->
-                            <div class="col-xl-6">
+                            <div class="col-6">
                                 <div class="item">
                                     <a href="">
                                         <span class="align-items-center media">
@@ -1506,7 +1326,7 @@
                             </div>
                             <!-- single item end -->
                             <!-- single item start  -->
-                            <div class="col-xl-6">
+                            <div class="col-6">
                                 <div class="item">
                                     <a href="">
                                         <span class="align-items-center media">
@@ -1543,9 +1363,9 @@
 
                     <!-- CampaignsOverview item start  -->
                     <div class="CampaignsOverviewIem ">
-                        <div class="row">
+                        <div class="row gy-lg-0 gx-lg-3 g-2">
                             <!-- single item start  -->
-                            <div class="col-xl-3">
+                            <div class="col-xl-3  col-6">
                                 <a href="" class="item d-flex justify-content-center align-items-center d-block">
                                     <span class="itemImg">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70"
@@ -1566,7 +1386,7 @@
                             <!-- single item end -->
 
                             <!-- single item start  -->
-                            <div class="col-xl-3">
+                            <div class="col-xl-3  col-6">
                                 <a href="" class="item d-flex justify-content-center align-items-center d-block">
                                     <span class="itemImg">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70"
@@ -1584,7 +1404,7 @@
                             </div>
                             <!-- single item end -->
                             <!-- single item start  -->
-                            <div class="col-xl-3">
+                            <div class="col-xl-3  col-6">
                                 <a href="" class="item d-flex justify-content-center align-items-center d-block">
                                     <span class="itemImg">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70"
@@ -1606,39 +1426,45 @@
                     </div>
                     <!-- CampaignsOverview item end -->
                     <div class="table-responsive">
-                        <table class="table mb-0">
-                            <thead>
-                                <tr>
-                                    <th scope="col">ID</th>
-                                    <th scope="col">Customer Name</th>
-                                    <th scope="col">Date Requested</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>00001</td>
-                                    <td>Christine Brooks</td>
-                                    <td>14 Feb 2019</td>
-                                </tr>
+                        <div class="table-container">
+                            <table class="table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Customer Name</th>
+                                        <th scope="col">Date Requested</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>00001</td>
+                                        <td>Christine Brooks</td>
+                                        <td>14 Feb 2019</td>
+                                    </tr>
 
-                                <tr>
-                                    <td>00002</td>
-                                    <td>Christine Brooks</td>
-                                    <td>14 Feb 2019</td>
-                                </tr>
-                                <tr>
-                                    <td>00003</td>
-                                    <td>Christine Brooks</td>
-                                    <td>14 Feb 2019</td>
-                                </tr>
-                                <tr>
-                                    <td>00004</td>
-                                    <td>Christine Brooks</td>
-                                    <td>14 Feb 2019</td>
-                                </tr>
+                                    <tr>
+                                        <td>00002</td>
+                                        <td>Christine Brooks</td>
+                                        <td>14 Feb 2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>00003</td>
+                                        <td>Christine Brooks</td>
+                                        <td>14 Feb 2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>00004</td>
+                                        <td>Christine Brooks</td>
+                                        <td>14 Feb 2019</td>
+                                    </tr>
 
-                            </tbody>
-                        </table>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="arrows">
+                            <button class="arrow-btn next-btn btn"><img src="./img/right.svg" alt="img"></button>
+                            <button class="arrow-btn prev-btn btn"><img src="./img/left.svg" alt="img"></button>
+                        </div>
                     </div>
 
                 </div>
@@ -1660,9 +1486,9 @@
                     </div>
                     <!-- CampaignsOverview item start  -->
                     <div class="CampaignsOverviewIem ">
-                        <div class="row">
+                        <div class="row gy-lg-0 gx-lg-3 g-2">
                             <!-- single item start  -->
-                            <div class="col-xl-3">
+                            <div class="col-xl-3  col-6">
                                 <a href="" class="item d-flex justify-content-center align-items-center d-block">
                                     <span class="itemImg">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70"
@@ -1683,7 +1509,7 @@
                             <!-- single item end -->
 
                             <!-- single item start  -->
-                            <div class="col-xl-3">
+                            <div class="col-xl-3  col-6">
                                 <a href="" class="item d-flex justify-content-center align-items-center d-block">
                                     <span class="itemImg">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70"
@@ -1706,48 +1532,54 @@
                     </div>
                     <!-- CampaignsOverview item end -->
                     <div class="table-responsive">
-                        <table class="table mb-0">
-                            <thead>
-                                <tr>
-                                    <th scope="col">ID</th>
-                                    <th scope="col">Phone Number</th>
-                                    <th scope="col">Price</th>
-                                    <th scope="col">Renew Date</th>
-                                    <th scope="col">Status</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>00001</td>
-                                    <td>218374217833</td>
-                                    <td>$455</td>
-                                    <td>14 Feb 2019</td>
-                                    <td><button>Active</button></td>
-                                </tr>
-                                <tr>
-                                    <td>00002</td>
-                                    <td>218374217833</td>
-                                    <td>$455</td>
-                                    <td>14 Feb 2019</td>
-                                    <td><button>Active</button></td>
-                                </tr>
-                                <tr>
-                                    <td>00003</td>
-                                    <td>218374217833</td>
-                                    <td>$455</td>
-                                    <td>14 Feb 2019</td>
-                                    <td><button>Active</button></td>
-                                </tr>
-                                <tr>
-                                    <td>00004</td>
-                                    <td>218374217833</td>
-                                    <td>$455</td>
-                                    <td>14 Feb 2019</td>
-                                    <td><button>Active</button></td>
-                                </tr>
+                        <div class="table-container">
+                            <table class="table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Phone Number</th>
+                                        <th scope="col">Price</th>
+                                        <th scope="col">Renew Date</th>
+                                        <th scope="col">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>00001</td>
+                                        <td>218374217833</td>
+                                        <td>$455</td>
+                                        <td>14 Feb 2019</td>
+                                        <td><button>Active</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>00002</td>
+                                        <td>218374217833</td>
+                                        <td>$455</td>
+                                        <td>14 Feb 2019</td>
+                                        <td><button>Active</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>00003</td>
+                                        <td>218374217833</td>
+                                        <td>$455</td>
+                                        <td>14 Feb 2019</td>
+                                        <td><button>Active</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>00004</td>
+                                        <td>218374217833</td>
+                                        <td>$455</td>
+                                        <td>14 Feb 2019</td>
+                                        <td><button>Active</button></td>
+                                    </tr>
 
-                            </tbody>
-                        </table>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="arrows">
+                            <button class="arrow-btn next-btn btn"><img src="./img/right.svg" alt="img"></button>
+                            <button class="arrow-btn prev-btn btn"><img src="./img/left.svg" alt="img"></button>
+                        </div>
                     </div>
 
                 </div>
@@ -1759,14 +1591,130 @@
     </div>
     <!-- wrapper end -->
 
-
-
+    <strong></strong>
     <!-- JS, Popper.js, and jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"
         integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="js/main.js"></script>
+    <script>
+
+        var options = {
+            series: [42, 47, 52, 58],
+            chart: {
+                width: 402,
+                type: 'polarArea',
+            },
+            labels: ['Phone Numbers <strong>$72387</strong>', 'Subscriptions <strong>$6213</strong>', 'SMS Purchase <strong>$6215</strong>', 'Total <strong>$621533</strong>'],
+            colors: ['#3464F3', '#1EC6B8', '#FFB11F', '#FF6195'],
+            responsive: [{
+                breakpoint: 760,
+                options: {
+                    chart: {
+                        width: 300
+                    },
+                    legend: {
+                        position: 'bottom'
+                    }
+                }
+            }],
+            fill: {
+                opacity: 1
+            },
+            stroke: {
+                width: 1,
+                colors: undefined
+            },
+            legend: {
+                position: 'right'
+            }, yaxis: {
+                show: false
+            },
+            plotOptions: {
+                polarArea: {
+                    rings: {
+                        strokeWidth: 0
+                    },
+                    spokes: {
+                        strokeWidth: 0
+                    }
+                }
+            }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+
+        var options2 = {
+            series: [42, 47, 52, 58],
+            chart: {
+                width: 420,
+                type: 'polarArea',
+            },
+            labels: ['Phone Numbers <strong>$72387</strong>', 'Subscriptions <strong>$6213</strong>', 'SMS Purchase <strong>$6215</strong>', 'Total <strong>$621533</strong>'],
+            colors: ['#3464F3', '#1EC6B8', '#FFB11F', '#FF6195'],
+            responsive: [{
+                breakpoint: 760,
+                options: {
+                    chart: {
+                        width: 300
+                    },
+                    legend: {
+                        position: 'bottom'
+                    }
+                }
+            }],
+            fill: {
+                opacity: 1
+            },
+            stroke: {
+                width: 1,
+                colors: undefined
+            },
+            legend: {
+                position: 'right'
+            }, yaxis: {
+                show: false
+            },
+            plotOptions: {
+                polarArea: {
+
+                    rings: {
+                        strokeWidth: 0
+                    },
+                    spokes: {
+                        strokeWidth: 0
+                    }
+                }
+            }
+        };
+
+        var chart2 = new ApexCharts(document.querySelector("#chart2"), options2);
+        chart2.render();
+
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const tableContainers = document.querySelectorAll('.table-container');
+            const prevBtns = document.querySelectorAll('.prev-btn');
+            const nextBtns = document.querySelectorAll('.next-btn');
+
+            prevBtns.forEach((prevBtn, index) => {
+                prevBtn.addEventListener('click', function () {
+                    tableContainers[index].scrollLeft -= 100;
+                });
+            });
+
+            nextBtns.forEach((nextBtn, index) => {
+                nextBtn.addEventListener('click', function () {
+                    tableContainers[index].scrollLeft += 100;
+                });
+            });
+        });
+    </script>
+
 </body>
 
 </html>

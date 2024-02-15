@@ -104,7 +104,11 @@ ul {
     height: 100vh;
     padding-top: 30px;
     transition: all ease 0.6s;
-
+    .mobileButton {
+      right: 10px;
+      top: 10px;
+      z-index: 999;
+    }
     // minimize style
     &.highlighted {
       width: 8%;
@@ -116,7 +120,6 @@ ul {
               padding-left: 20px;
               padding-right: 20px;
               text-align: center;
-              justify-content: center;
               transition: all ease 0.6s;
               span {
                 opacity: 0;
@@ -351,6 +354,7 @@ ul {
   // header start
   header {
     position: fixed;
+    z-index: 9;
     top: 0;
     width: 81%;
     margin-left: 19%;
@@ -520,6 +524,9 @@ ul {
     }
   }
   // header end
+  .apexcharts-canvas {
+    margin: auto;
+  }
   // rightItem start
   .rightItem {
     padding-top: 110px;
@@ -532,13 +539,19 @@ ul {
   // rightItem end
 
   .salesOverview {
+    .salesOverviewRow {
+      --bs-gutter-x: 30px;
+    }
     .salesItem {
-      gap: 24px 0;
+      --bs-gutter-x: 30px;
+      --bs-gutter-y: 24px;
+
       .item {
         border-radius: 25px;
         background: #fff;
         padding: 25px 27px;
         a {
+          display: block;
           .media {
             gap: 15px;
             .box {
@@ -587,6 +600,7 @@ ul {
       }
     }
     .salesOverviewRight {
+      overflow: hidden;
       border-radius: 25px;
       background: #fff;
       padding-top: 24px;
@@ -660,13 +674,15 @@ ul {
       }
     }
 
-    &.salesOverview {
+    &.smsOverview {
       background: #fff;
       padding: 30px 26px;
       border-radius: 26px;
       margin-bottom: 30px;
       .salesItem {
-        gap: 8px 0;
+        --bs-gutter-x: 10px;
+        --bs-gutter-y: 10px;
+
         .item {
           background-color: #f2f4f7;
           a {
@@ -742,6 +758,30 @@ ul {
       letter-spacing: -0.114px;
       margin-bottom: 23px;
     }
+    .table-responsive {
+      overflow-x: auto;
+      white-space: nowrap;
+      position: relative;
+    }
+
+    .table-container {
+      overflow-x: hidden;
+    }
+    .arrows {
+      position: absolute;
+      right: 5px;
+      top: 10px;
+      display: flex;
+      gap: 0 8px;
+      display: none;
+      button {
+        padding: 0;
+      }
+      .next-btn {
+      }
+      .prev-btn {
+      }
+    }
     table {
       thead tr {
         * {
@@ -774,7 +814,7 @@ ul {
           font-weight: 600;
           line-height: normal;
           padding: 26px 9px;
-          border-color: #979797;
+          border-color: rgb(151 151 151 / 50%);
 
           button {
             border-radius: 4.5px;
@@ -845,11 +885,14 @@ ul {
     margin-bottom: 30px;
 
     .SuccessItem {
+      .row {
+        --bs-gutter-y: 14px;
+      }
       .item {
         border-radius: 14px;
         background: #fff;
         box-shadow: 6px 6px 54px 0px rgba(0, 0, 0, 0.05);
-        padding: 27px 9px 27px 20px;
+        padding: 25px 20px 25px 20px;
         margin-bottom: 11px;
         &:last-child {
           margin-bottom: 0;
@@ -952,6 +995,9 @@ ul {
         }
       }
       .CampaignsOverviewIem {
+        .row {
+          --bs-gutter-x: 25px;
+        }
         margin-bottom: 34px;
         .item {
           border-radius: 25px;

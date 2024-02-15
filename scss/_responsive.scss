@@ -45,14 +45,265 @@
   .wrapper .LeftItem nav .navList .accordion-button::before {
     width: 3px;
   }
+  .wrapper .LeftItem nav .navList .accordion-button::after {
+    right: 20px;
+  }
+  .wrapper .salesOverview.salesOverview .salesItem {
+    gap: 20px 0;
+  }
+  .wrapper .rightItem {
+    padding-right: 15px;
+  }
+  .wrapper .salesOverview.salesOverview .salesOverviewRight {
+    max-width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  .wrapper .salesOverview.salesOverview .salesOverviewRight .TitleArea h2,
+  .wrapper .salesOverview.salesOverview .salesOverviewRight .TitleArea .h2 {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .wrapper .salesOverview.salesOverview .salesOverviewRight .TitleArea {
+    margin-bottom: 40px;
+  }
+  .wrapper
+    .salesOverview.salesOverview
+    .salesOverviewRight
+    .salesOverviewItem
+    .contentItem {
+    margin: 0 auto;
+    margin-top: 25px;
+  }
+  .wrapper .ordersOverview .SuccessItem .item span {
+    display: block;
+  }
+  .wrapper .ordersOverview .SuccessItem .item .leftTitle .titleText {
+    margin-bottom: 5px;
+  }
+  .wrapper .ordersOverview .SuccessItem .item .leftTitle {
+    margin-bottom: 0px;
+  }
+  .wrapper .ordersOverview .SuccessItem .item .itemButtom {
+    display: none !important;
+  }
+  .wrapper .ordersOverview .SuccessItem {
+    margin-bottom: 30px;
+  }
+  .wrapper .CampaignsOverview .ordersOverviewTable .CampaignsOverviewIem .row {
+    gap: 20px 0;
+  }
 }
 
 /*// Medium devices (tablets, 768px and up)*/
-@media (min-width: 768px) and (max-width: 991.98px) {
+@media (max-width: 991.98px) {
+  .wrapper header .rightHeader .dropdown.dpd2 button img,
+  .wrapper header .rightHeader .dropdown.dpd3 button .media .media-body {
+    display: none;
+  }
+  .wrapper header .rightHeader .dropdown.dpd3 button::after {
+    display: none;
+  }
+  .wrapper header .rightHeader .dropdown.dpd3 button {
+    padding: 0;
+    padding-right: 0;
+  }
+  .wrapper .LeftItem .TopItem button {
+    display: none;
+  }
+  .wrapper .LeftItem {
+    left: -300px;
+    top: 0;
+    height: 100vh;
+    padding-top: 30px;
+    transition: all ease 0.6s;
+    width: 0;
+    text-align: left;
+    z-index: 999;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-bottom: 30px;
+  }
+
+  .wrapper .LeftItem.highlighted {
+    left: 0;
+    width: 100%;
+    transition: all ease 0.6s;
+  }
+  .wrapper .LeftItem.highlighted nav .navList .navItem .navLink span {
+    display: block;
+    width: auto;
+    opacity: 1;
+  }
+  .wrapper .LeftItem nav .navList .navItem .navLink::before {
+    opacity: 0 !important;
+    display: none;
+  }
+  .wrapper header .searchbar {
+    position: relative;
+    width: 140px;
+    max-width: 100%;
+  }
+  .wrapper header {
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    margin-left: 0;
+    width: 100%;
+  }
+  .wrapper .rightItem {
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-left: 0;
+    width: 100%;
+  }
+  .wrapper .LeftItem.highlighted .TopItem a img {
+    opacity: 1;
+    width: auto;
+    margin-left: 0;
+  }
+  .wrapper .LeftItem nav {
+    width: 190px;
+    margin: auto;
+  }
+  .wrapper .LeftItem.highlighted nav .navList .accordion-button {
+    text-align: left;
+  }
+  .wrapper .LeftItem.highlighted nav .navList .accordion-button span {
+    opacity: 1;
+    width: 100%;
+  }
+  .wrapper .LeftItem nav .navList {
+    overflow-y: hidden;
+    overflow-x: hidden;
+    height: auto;
+    padding-bottom: 0;
+  }
+  .wrapper .salesOverview .salesItem {
+    --bs-gutter-x: 16px;
+    --bs-gutter-y: 19px;
+  }
+  .wrapper .ordersOverviewTable table thead tr th:last-child,
+  .wrapper .ordersOverviewTable table tbody tr td:last-child {
+    padding-right: 70px;
+  }
 }
 
 /*// Small devices (landscape phones, 576px and up)*/
-@media (min-width: 576px) and (max-width: 767.98px) {
+@media (max-width: 767.98px) {
+  .wrapper .ordersOverviewTable .arrows {
+    display: flex;
+  }
+  .wrapper .salesOverview .salesOverviewRight .salesOverviewItem {
+    margin-top: 15px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .wrapper .ordersOverview .SuccessItem .item {
+    padding: 20px 8px 20px 8px;
+  }
+  .wrapper .salesOverview.salesOverview {
+    background: transparent;
+    padding: 0px;
+    border-radius: 26px;
+    margin-bottom: 30px;
+  }
+  .wrapper .salesOverview.salesOverview .salesItem .item {
+    background-color: #ffffff;
+  }
+  .wrapper .salesOverview .salesItem .item a .media {
+    display: block;
+    text-align: center;
+  }
+  .wrapper .salesOverview .salesItem .item a .media .box {
+    margin: auto;
+    margin-bottom: 11px;
+  }
+  .wrapper .salesOverview.salesOverview .salesOverviewRight {
+    padding: 30px 12px;
+    background: #fff;
+    border-radius: 26px;
+  }
+  .wrapper .ordersOverview .SuccessItem .item .leftTitle .titleText {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+  .wrapper .ordersOverview .SuccessItem .item .leftTitle .titleNumber {
+    font-size: 20px;
+  }
+  .wrapper .rightItem {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .wrapper .CampaignsOverview .ordersOverviewTable .topITem select {
+    margin: 0 auto;
+    margin-top: 15px;
+  }
+  .wrapper .ordersOverviewTable {
+    padding: 22px 10px;
+    border-radius: 14px;
+    background: rgb(255 255 255);
+    box-shadow: none;
+  }
+  .wrapper
+    .CampaignsOverview
+    .ordersOverviewTable
+    .CampaignsOverviewIem
+    .item
+    .itemImg {
+    margin-bottom: 10px;
+  }
+  .wrapper
+    .CampaignsOverview
+    .ordersOverviewTable
+    .CampaignsOverviewIem
+    .item
+    span {
+    display: block;
+  }
+  .wrapper .CampaignsOverview .ordersOverviewTable .CampaignsOverviewIem .item {
+    border-radius: 25px;
+    padding: 20px;
+    display: block !important;
+    text-align: center;
+  }
+  .wrapper .CampaignsOverview .ordersOverviewTable .CampaignsOverviewIem .row {
+    --bs-gutter-x: 10px;
+  }
+  .wrapper .salesOverview.salesOverview .salesItem {
+    gap: 0;
+  }
+  .wrapper .CampaignsOverview .ordersOverviewTable .CampaignsOverviewIem .row {
+    gap: 0 0;
+  }
+  .wrapper .salesOverview.smsOverview .salesItem {
+    margin-top: 30px;
+  }
+  .wrapper .ordersOverviewTable table {
+    width: 600px;
+  }
+  .wrapper table thead tr * {
+    background: #ffffff;
+    border-bottom: 1px solid #ddd;
+  }
+  .wrapper header .rightHeader {
+    gap: 15px;
+  }
+  .wrapper header {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+  .toggoleButoonMobile {
+    svg {
+      width: 15px;
+    }
+  }
+  .wrapper header .searchbar {
+    position: relative;
+    width: 125px;
+    max-width: 100%;
+  }
 }
 
 /*Extra small devices (portrait phones, less than 576px)*/
