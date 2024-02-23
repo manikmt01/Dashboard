@@ -191,6 +191,30 @@
   .wrapper .ordersOverviewTable table tbody tr td:last-child {
     padding-right: 70px;
   }
+
+  // login start
+  .loginWrapp .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .loginWrapp {
+    padding-top: 65px;
+  }
+  .loginWrapp .box .boxInner {
+    padding-top: 50px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 50px;
+  }
+  .loginWrapp .box .boxInner p {
+    width: 290px;
+    max-width: 100%;
+    margin: auto;
+  }
+  .loginWrapp .box .boxInner form ul li button {
+    font-size: 18px;
+  }
+  // login end
 }
 
 /*// Small devices (landscape phones, 576px and up)*/

@@ -1049,3 +1049,234 @@ ul {
   }
 }
 // wrapper end
+// login start
+.loginWrapp {
+  padding-top: 90px;
+  padding-bottom: 40px;
+  .box {
+    width: 630px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    .logo {
+      text-align: center;
+      margin-bottom: 31px;
+      a {
+        img {
+          width: 275px;
+        }
+      }
+    }
+    .boxInner {
+      border-radius: 24px;
+      padding: {
+        top: 90px;
+        left: 57px;
+        right: 57px;
+        bottom: 70px;
+      }
+      h1 {
+        font-size: 30px;
+        color: #202224;
+        letter-spacing: -0.11px;
+        margin-bottom: 15px;
+      }
+      p {
+        font-size: 18px;
+        letter-spacing: -0.06px;
+        color: #202224;
+        font-weight: 600;
+        margin-bottom: 0;
+      }
+      form {
+        button {
+          transition: all ease 0.6s;
+          &:hover {
+            background-color: #0081d8 !important;
+            color: #fff !important;
+            transition: all ease 0.6s;
+          }
+        }
+        a {
+          &:hover {
+            color: #0081d8 !important;
+          }
+        }
+        margin-top: 37px;
+        .form-check {
+          margin-bottom: 55px;
+        }
+        .mb-3 {
+          label {
+            color: #202224;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: block;
+          }
+          input {
+            border-color: #d8d8d8;
+            background-color: #f1f4f9;
+            border-radius: 8px;
+            padding: 16px 15.5px;
+            font-size: 18px;
+            font-weight: 600;
+            &.form-check-input {
+              padding: 11px 11px;
+              border-radius: 5px;
+              background-color: transparent;
+            }
+            &:checked {
+              background-color: #0d6efd !important;
+              border-color: #0d6efd !important;
+            }
+          }
+          .form-check-label {
+            color: #202224;
+            font-size: 18px;
+            font-weight: 600;
+            padding-left: 10px;
+            padding-top: 3px;
+          }
+
+          .passwordItem {
+            margin-bottom: 15px;
+            padding-top: 24px;
+            label {
+              margin-bottom: 0;
+            }
+            a {
+              color: #202224;
+              font-size: 18px;
+              font-weight: 600;
+            }
+          }
+        }
+        .signInButton {
+          background-color: #53aaf9;
+          border-radius: 8px;
+          width: 418px;
+          max-width: 100%;
+          margin: 0 auto;
+          display: block;
+          font-size: 20px;
+          font-weight: 700;
+          padding: 15px;
+          border: 0;
+          margin-bottom: 18px;
+        }
+        .dontHave {
+          font-size: 18px;
+          font-weight: 600;
+          color: #202224;
+          text-align: center;
+          display: block;
+          margin-bottom: 80px;
+          a {
+            color: #53aaf9;
+            text-decoration: underline;
+          }
+        }
+        .or {
+          position: relative;
+          text-align: center;
+          margin-bottom: 24px;
+          &::after {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            height: 1px;
+            background-color: #dddddd;
+          }
+          span {
+            display: inline-block;
+            font-size: 18px;
+            font-weight: 600;
+            background-color: #fff;
+            position: relative;
+            z-index: 99;
+            padding: 0 10px;
+            color: #202224;
+          }
+        }
+        ul {
+          li {
+            &:last-child {
+              button {
+                margin-bottom: 0;
+                background-color: #fff;
+                color: rgb(0 0 0 / 54%);
+                box-shadow: 0 0rem 0.5rem 1px rgba(0, 0, 0, 0.075);
+              }
+            }
+            button {
+              background-color: #53aaf9;
+              border-radius: 8px;
+              width: 418px;
+              max-width: 100%;
+              margin: 0 auto;
+              display: flex;
+              justify-content: start;
+              font-size: 20px;
+              font-weight: 700;
+              padding: 15px;
+              gap: 15px;
+              align-items: center;
+              border: 0;
+              color: #fff;
+              margin-bottom: 20px;
+
+              span {
+              }
+              svg {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// login end
+// CharleneReed start
+.CharleneReed {
+  margin-bottom: 30px;
+  .itemText {
+    h2 {
+      font-size: 32px;
+      margin-bottom: 0;
+      color: #202224;
+      letter-spacing: -0.11px;
+    }
+  }
+  .itemLink {
+    ul {
+      gap: 6.67px;
+      li {
+        a {
+          background-color: #53aaf9;
+          display: flex;
+          text-align: center;
+          justify-content: center;
+          gap: 10px;
+          align-items: center;
+          font-size: 16px;
+          color: #fff;
+          border-radius: 8px;
+          padding: 14px 16px;
+          &.Disable {
+            background-color: #ef3826;
+          }
+          svg {
+          }
+          span {
+          }
+        }
+      }
+    }
+  }
+}
+// CharleneReed end

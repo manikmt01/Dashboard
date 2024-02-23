@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+ <!-- Required meta tags -->
+ <meta charset="utf-8">
+ <meta name="description" content="Web Content">
+ <meta name="keywords" content="HTML, CSS, JavaScript">
+ <meta name="author" content="author">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+ <meta http-equiv="content-script-type" content="text/javascript">
+ <meta http-equiv="x-dns-prefetch-control" content="on">
+
+ <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
+ <link rel="icon" type="image/png" sizes="192x192" href="./img/favicon/android-chrome-192x192.png">
+ <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+ <link rel="icon" type="image/png" sizes="96x96" href="./img/favicon/favicon.ico">
+ <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+ <!-- Custom css -->
+ <link rel="stylesheet" href="./css/main.min.css">
+ <title>Website title</title>
+</head>
+
+<body>
+ <div id="preloader">
+  <img src="img/logo.svg" alt="img" class="img-fluid">
+ </div>
+
+ <!-- login wrapper start  -->
+ <div class="loginWrapp">
+  <div class="container">
+   <div class="box">
+    <!-- logo start  -->
+    <div class="logo">
+     <a href=""><img src="./img/logo.svg" alt="logo"></a>
+    </div>
+    <!-- logo end -->
+    <!-- box inner start  -->
+    <div class="boxInner shadow-lg bg-white">
+     <h1 class="text-center">Login to Account</h1>
+     <p class="text-center">Please enter your email and password to continue</p>
+     <form action="">
+      <div class="mb-3">
+       <label for="exampleInputEmail1" class="form-label">Email address:</label>
+       <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+        placeholder="esteban_schiller@gmail.com">
+      </div>
+      <div class="mb-3">
+       <div class="d-flex justify-content-between passwordItem">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <a href="">Forget Password?</a>
+       </div>
+
+       <input type="password" class="form-control" id="exampleInputPassword1" placeholder="● ● ● ● ● ● ">
+      </div>
+      <div class=" form-check">
+       <input type="checkbox" class="form-check-input" id="exampleCheck1">
+       <label class="form-check-label" for="exampleCheck1">Remember Password</label>
+      </div>
+      <button type="submit" class="btn btn-primary signInButton">Sign In</button>
+      <p class="dontHave">Don’t have an account? <a href="">Create Account</a></p>
+      <div class="or">
+       <span>OR</span>
+      </div>
+      <ul>
+       <li><button>
+         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+           d="M23.5 12.0694C23.5 5.71811 18.3513 0.569391 12 0.569391C5.64872 0.569391 0.5 5.71811 0.5 12.0694C0.5 17.8094 4.70538 22.567 10.2031 23.4297V15.3936H7.2832V12.0694H10.2031V9.5358C10.2031 6.65361 11.92 5.06158 14.5468 5.06158C15.805 5.06158 17.1211 5.28619 17.1211 5.28619V8.11627H15.671C14.2424 8.11627 13.7969 9.00273 13.7969 9.91218V12.0694H16.9863L16.4765 15.3936H13.7969V23.4297C19.2946 22.567 23.5 17.8094 23.5 12.0694Z"
+           fill="white" />
+         </svg>
+         <span>Continue with Facebook</span>
+        </button></li>
+       <li><button>
+         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+           d="M23.04 12.2605C23.04 11.445 22.9668 10.6609 22.8309 9.9082H12V14.3566H18.1891C17.9225 15.7941 17.1123 17.0121 15.8943 17.8275V20.713H19.6109C21.7855 18.7109 23.04 15.7627 23.04 12.2605Z"
+           fill="#4285F4" />
+          <path fill-rule="evenodd" clip-rule="evenodd"
+           d="M11.9995 23.5005C15.1045 23.5005 17.7077 22.4708 19.6104 20.7144L15.8938 17.829C14.864 18.519 13.5467 18.9267 11.9995 18.9267C9.00425 18.9267 6.46902 16.9037 5.5647 14.1855H1.72266V17.1651C3.61493 20.9235 7.50402 23.5005 11.9995 23.5005Z"
+           fill="#34A853" />
+          <path fill-rule="evenodd" clip-rule="evenodd"
+           d="M5.56523 14.1855C5.33523 13.4955 5.20455 12.7584 5.20455 12.0005C5.20455 11.2425 5.33523 10.5055 5.56523 9.81548V6.83594H1.72318C0.944318 8.38844 0.5 10.1448 0.5 12.0005C0.5 13.8562 0.944318 15.6125 1.72318 17.165L5.56523 14.1855Z"
+           fill="#FBBC05" />
+          <path fill-rule="evenodd" clip-rule="evenodd"
+           d="M11.9995 5.07386C13.6879 5.07386 15.2038 5.65409 16.3956 6.79364L19.694 3.49523C17.7024 1.63955 15.0992 0.5 11.9995 0.5C7.50402 0.5 3.61493 3.07705 1.72266 6.83545L5.5647 9.815C6.46902 7.09682 9.00425 5.07386 11.9995 5.07386Z"
+           fill="#EA4335" />
+         </svg>
+         <span>Continue with Google</span>
+        </button></li>
+      </ul>
+
+     </form>
+    </div>
+    <!-- box inner end -->
+   </div>
+  </div>
+ </div>
+ <!-- login wrapper end -->
+
+
+
+ <!-- JS, Popper.js, and jQuery -->
+ <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+  integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+ <!-- JavaScript Bundle with Popper -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+ <script src="./js/main.js"></script>
+
+</body>
+
+</html>
